@@ -1,0 +1,28 @@
+ALGORITHM checkpoint
+VAR
+    str: STRING
+    nw, nv, l, i :INTEGER
+BEGIN
+ i:= 0;
+ nv:= 0;
+ nw:= 0;
+ l:= 0;
+ Read(str)
+ WHILE (str[i] <> ".") DO
+    l:=l+1
+    IF (str[i] in "AEUOIaeuoi") THEN
+        nv:=nv+1
+    END_IF
+    IF (str[i]=" ") THEN
+         nw:=nw+1
+    END_IF  
+    i:= i+1  
+ END_WHILE
+ IF (str[i-1]=" ") THEN
+        l:=l+1;
+        nw:= nw+1
+END_IF
+  Write("nmber of words", nw+1)
+  Write("number of vowls",nv)
+  Write("number of characters",l+1)   
+END
