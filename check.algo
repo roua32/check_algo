@@ -18,7 +18,7 @@ BEGIN
     END_IF  
     i:= i+1  
  END_WHILE
- IF (str[i-1]=" ") THEN
+ IF (str[l-1]=" ") THEN
         l:=l+1;
         nw:= nw+1
 END_IF
