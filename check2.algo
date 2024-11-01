@@ -1,0 +1,17 @@
+ALGORITHM insertion_sort
+VAR
+     tab : ARRAY_OF INTEGER[n];
+     n,i,j, current : INTEGER
+BEGIN
+    Read(n)
+    FOR i FROM 1 TO n STEP 1  DO
+        j=i-1
+        current:= tab [i]
+        WHILE (tab[j]> current and j>=0) DO
+            tab [j+1]:=tab [j]
+            j:= j-1
+        END_WHILE
+        tab[j+1]:=current
+    END_FOR
+    Write(tab)
+END
